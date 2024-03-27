@@ -1,22 +1,34 @@
 import React from "react";
 import { useState } from "react";
 
+// Component for adding a new post
+
 export default function FormAddPost({ addPost }) {
+  // State variables for new post title and description
+
   const [newTitle, setNewTitle] = useState("");
   const [newDesc, setNewDesc] = useState("");
 
+  // Function to handle form submission
+
   const handleSubmit = function (e) {
     e.preventDefault();
+
+    // Create a new post object with unique ID, title, and description
 
     const newPost = {
       id: crypto.randomUUID(),
       title: newTitle,
       description: newDesc,
     };
+    // Call addPost function to add the new post
     addPost(newPost);
+    // Clear input fields after submission
     setNewTitle("");
     setNewDesc("");
   };
+
+  // JSX for the form to add a new post
 
   return (
     <>

@@ -1,7 +1,7 @@
 import "./style/styles.css";
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
-import MainContent from "./MainContent.jsx";
+import Header from "./components/Header.jsx";
+import Footer from "./components/Footer.jsx";
+import MainContent from "./components/MainContent.jsx";
 
 export default function App({ blogTitle, navLinks, posts, isLoggedIn }) {
   return (

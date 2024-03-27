@@ -7,10 +7,14 @@ export default function MainContent({ posts, isLoggedIn }) {
   if (isLoggedIn) {
     const [post, setPost] = useState(posts);
 
+    //delete post function
+
     const deletePost = (key) => {
       const updatePosts = post.filter((p) => p.id !== key);
       setPost(updatePosts);
     };
+
+    // add post function
 
     const addPost = (newPost) => {
       setPost((currentPosts) => [...currentPosts, newPost]);
@@ -31,6 +35,8 @@ export default function MainContent({ posts, isLoggedIn }) {
     };
 
     return (
+      // Welcome message "static"
+
       <main className="main-content">
         <div className="welcome-message">Bienvenue sur Mon Super Blog !</div>
         <div className="description">
@@ -40,10 +46,13 @@ export default function MainContent({ posts, isLoggedIn }) {
         </div>
 
         <h2>POSTS</h2>
-
+        {/*display posts  */}
         <PostList post={post} deletePost={deletePost} updatePost={updatePost} />
 
         <h1>Ajouter un nouvel article</h1>
+
+        {/*display add post form */}
+
         <FormAddPost addPost={addPost} />
       </main>
     );
