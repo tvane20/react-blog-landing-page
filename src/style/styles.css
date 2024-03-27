@@ -1,0 +1,77 @@
+/* styles.css */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background-color: rgb(22, 23, 84);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header-title {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  cursor: pointer;
+  transition: text-shadow 0.3s;
+}
+
+.header-title:hover {
+  text-shadow: 2px 2px 5px rgba(224, 92, 27, 0.8);
+}
+
+#main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+
+.menu-item a:hover {
+  border-color: rgba(224, 92, 27, 0.8);
+}
+
+.main-content {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 40px;
+  text-align: center;
+  flex-grow: 1; /* Pour que le contenu principal occupe l'espace restant */
+}
+
+.welcome-message {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 18px;
+}
+
+.footer {
+  background-color: rgb(22, 23, 84);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  height: 25vh; /* Le footer prend 25% de la hauteur de la fenêtre */
+}
